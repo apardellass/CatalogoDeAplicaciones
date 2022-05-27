@@ -7,6 +7,11 @@
 
 import Foundation
 
-struct Category: Codable {
+struct Category: Codable, Identifiable {
+    var id = UUID()
     let attributes: CategoryAttributes?
+
+    enum CodingKeys: String, CodingKey {
+        case attributes
+    }
 }

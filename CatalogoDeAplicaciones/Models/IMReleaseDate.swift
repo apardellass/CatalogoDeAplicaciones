@@ -8,6 +8,6 @@
 import Foundation
 
 struct IMReleaseDate: Codable {
-    let label: Date?
+    let label: String?
     let attributes: Icon?
 }
