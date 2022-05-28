@@ -50,6 +50,7 @@
 		D3C20A3228418EEC002CE005 /* CategoriesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C20A3128418EEC002CE005 /* CategoriesListView.swift */; };
 		D3C20A3428419008002CE005 /* ApplicationsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C20A3328419008002CE005 /* ApplicationsListView.swift */; };
 		D3C2562228420AC90044B63C /* CatalogueViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C2562128420AC90044B63C /* CatalogueViewModel.swift */; };
+		D3C25624284224180044B63C /* ApplicationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C25623284224180044B63C /* ApplicationDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,6 +117,7 @@
 		D3C20A3128418EEC002CE005 /* CategoriesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesListView.swift; sourceTree = "<group>"; };
 		D3C20A3328419008002CE005 /* ApplicationsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationsListView.swift; sourceTree = "<group>"; };
 		D3C2562128420AC90044B63C /* CatalogueViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogueViewModel.swift; sourceTree = "<group>"; };
+		D3C25623284224180044B63C /* ApplicationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -247,6 +249,7 @@
 				D38180102840CC4D001849E1 /* ContentView.swift */,
 				D3C20A3128418EEC002CE005 /* CategoriesListView.swift */,
 				D3C20A3328419008002CE005 /* ApplicationsListView.swift */,
+				D3C25623284224180044B63C /* ApplicationDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -431,6 +434,7 @@
 				D38356D128412C8600AB379E /* EntryLink.swift in Sources */,
 				D38356B928412A0A00AB379E /* IMArtistAttributes.swift in Sources */,
 				D38356C928412C4200AB379E /* IMPriceAttributes.swift in Sources */,
+				D3C25624284224180044B63C /* ApplicationDetailView.swift in Sources */,
 				D38356A92841296400AB379E /* Author.swift in Sources */,
 				D38356DD28412CE300AB379E /* FeedLink.swift in Sources */,
 				D38356B3284129D700AB379E /* ID.swift in Sources */,

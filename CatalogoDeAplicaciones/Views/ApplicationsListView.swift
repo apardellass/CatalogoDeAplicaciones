@@ -20,7 +20,7 @@ struct ApplicationsListView: View {
                         HStack(spacing: 16) {
                             AsyncImage(url: URL(string: imageUrlString))
                                 .cornerRadius(10)
-                            Text(title)
+                            NavigationLink(title, destination: ApplicationDetailView(entry: entry))
                         }
                         .padding()
                     }
