@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct Entry: Codable {
+struct Entry: Codable, Identifiable {
+    let id = UUID()
     let imName: Icon?
     let imImage: [IMImage]?
     let summary: Icon?
@@ -15,7 +16,7 @@ struct Entry: Codable {
     let imContentType: IMContentType?
     let rights, title: Icon?
     let link: [EntryLink]?
-    let id: ID?
+    // let id: ID?
     let imArtist: IMArtist?
     let category: Category?
     let imReleaseDate: IMReleaseDate?
@@ -26,7 +27,7 @@ struct Entry: Codable {
         case summary
         case imPrice = "im:price"
         case imContentType = "im:contentType"
-        case rights, title, link, id
+        case rights, title, link
         case imArtist = "im:artist"
         case category
         case imReleaseDate = "im:releaseDate"

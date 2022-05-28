@@ -8,8 +8,31 @@
 import SwiftUI
 
 struct ApplicationsListView: View {
+    @EnvironmentObject var catalogueViewModel: CatalogueViewModel
+
+    var category: Category?
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        List {
+            ForEach(self.catalogueViewModel.entries, id: \.id) { entry in
+                if let image = entry.imImage?[0], let imName = entry.imName {
+                    if let imageUrlString = image.label, let title = imName.label {
+                        HStack(spacing: 16) {
+                            AsyncImage(url: URL(string: imageUrlString))
+                                .cornerRadius(10)
+                            Text(title)
+                        }
+                        .padding()
+                    }
+                }
+            }
+        }
+        .navigationTitle(Text(category!.attributes!.label!))
+        .onAppear {
+            if let category = category {
+                catalogueViewModel.getEntries(category: category)
+            }
+        }
     }
 }
 

@@ -10,8 +10,13 @@ import Foundation
 class CatalogueViewModel: ObservableObject {
     @Published var categories = [Category]()
     @Published var catalogue: Catalogue?
+    @Published var entries = [Entry]()
 
-    fileprivate func getCatalogue() {
+    init() {
+        getCatalogue()
+    }
+
+    private func getCatalogue() {
         CatalogueService().getCatalogue { catalogue in
             self.catalogue = catalogue
 
@@ -29,7 +34,11 @@ class CatalogueViewModel: ObservableObject {
         }
     }
 
-    init() {
-        getCatalogue()
+    func getEntries(category: Category) {
+        if let feed = catalogue?.feed {
+            if let entries = feed.entry {
+                self.entries = entries.filter { $0.category?.attributes?.label == category.attributes?.label }
+            }
+        }
     }
 }

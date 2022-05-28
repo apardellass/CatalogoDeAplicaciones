@@ -16,7 +16,8 @@ struct CategoriesListView: View {
                 ForEach(self.catalogueViewModel.categories, id: \.id) { category in
                     if let attributes = category.attributes {
                         if let label = attributes.label {
-                            NavigationLink(label, destination: ApplicationsListView())
+                            NavigationLink(label, destination: ApplicationsListView(category: category)
+                                .environmentObject(catalogueViewModel))
                         }
                     }
                 }
