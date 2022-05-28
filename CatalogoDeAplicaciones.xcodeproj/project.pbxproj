@@ -48,9 +48,11 @@
 		D38356DF28412CF000AB379E /* FluffyAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38356DE28412CF000AB379E /* FluffyAttributes.swift */; };
 		D3C20A30284166C0002CE005 /* CatalogueService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C20A2F284166C0002CE005 /* CatalogueService.swift */; };
 		D3C20A3228418EEC002CE005 /* CategoriesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C20A3128418EEC002CE005 /* CategoriesListView.swift */; };
-		D3C20A3428419008002CE005 /* ApplicationsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C20A3328419008002CE005 /* ApplicationsListView.swift */; };
+		D3C20A3428419008002CE005 /* ApplicationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C20A3328419008002CE005 /* ApplicationView.swift */; };
 		D3C2562228420AC90044B63C /* CatalogueViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C2562128420AC90044B63C /* CatalogueViewModel.swift */; };
 		D3C25624284224180044B63C /* ApplicationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C25623284224180044B63C /* ApplicationDetailView.swift */; };
+		D3C2562628423F330044B63C /* ApplicationListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C2562528423F330044B63C /* ApplicationListView.swift */; };
+		D3C2562828423F3D0044B63C /* ApplicationGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C2562728423F3D0044B63C /* ApplicationGridView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,9 +117,11 @@
 		D38356DE28412CF000AB379E /* FluffyAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FluffyAttributes.swift; sourceTree = "<group>"; };
 		D3C20A2F284166C0002CE005 /* CatalogueService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogueService.swift; sourceTree = "<group>"; };
 		D3C20A3128418EEC002CE005 /* CategoriesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesListView.swift; sourceTree = "<group>"; };
-		D3C20A3328419008002CE005 /* ApplicationsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationsListView.swift; sourceTree = "<group>"; };
+		D3C20A3328419008002CE005 /* ApplicationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationView.swift; sourceTree = "<group>"; };
 		D3C2562128420AC90044B63C /* CatalogueViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogueViewModel.swift; sourceTree = "<group>"; };
 		D3C25623284224180044B63C /* ApplicationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationDetailView.swift; sourceTree = "<group>"; };
+		D3C2562528423F330044B63C /* ApplicationListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationListView.swift; sourceTree = "<group>"; };
+		D3C2562728423F3D0044B63C /* ApplicationGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationGridView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -246,10 +250,12 @@
 		D38356E028413DBA00AB379E /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				D38180102840CC4D001849E1 /* ContentView.swift */,
-				D3C20A3128418EEC002CE005 /* CategoriesListView.swift */,
-				D3C20A3328419008002CE005 /* ApplicationsListView.swift */,
 				D3C25623284224180044B63C /* ApplicationDetailView.swift */,
+				D3C2562728423F3D0044B63C /* ApplicationGridView.swift */,
+				D3C2562528423F330044B63C /* ApplicationListView.swift */,
+				D3C20A3328419008002CE005 /* ApplicationView.swift */,
+				D3C20A3128418EEC002CE005 /* CategoriesListView.swift */,
+				D38180102840CC4D001849E1 /* ContentView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -410,7 +416,7 @@
 			files = (
 				D38356DB28412CD400AB379E /* TypeEnum.swift in Sources */,
 				D38356D328412C9800AB379E /* PurpleAttributes.swift in Sources */,
-				D3C20A3428419008002CE005 /* ApplicationsListView.swift in Sources */,
+				D3C20A3428419008002CE005 /* ApplicationView.swift in Sources */,
 				D38356B7284129FA00AB379E /* IMArtist.swift in Sources */,
 				D38356BB28412A1A00AB379E /* IMContentType.swift in Sources */,
 				D38180182840CC4E001849E1 /* Persistence.swift in Sources */,
@@ -423,6 +429,7 @@
 				D38356A72841294F00AB379E /* Feed.swift in Sources */,
 				D38356B1284129C100AB379E /* CategoryAttributes.swift in Sources */,
 				D38356CF28412C7700AB379E /* IMReleaseDate.swift in Sources */,
+				D3C2562628423F330044B63C /* ApplicationListView.swift in Sources */,
 				D381801B2840CC4E001849E1 /* CatalogoDeAplicaciones.xcdatamodeld in Sources */,
 				D38356CB28412C5100AB379E /* Currency.swift in Sources */,
 				D38356BD28412A3300AB379E /* IMContentTypeAttributes.swift in Sources */,
@@ -432,6 +439,7 @@
 				D38356D528412CAB00AB379E /* IMAssetType.swift in Sources */,
 				D3C2562228420AC90044B63C /* CatalogueViewModel.swift in Sources */,
 				D38356D128412C8600AB379E /* EntryLink.swift in Sources */,
+				D3C2562828423F3D0044B63C /* ApplicationGridView.swift in Sources */,
 				D38356B928412A0A00AB379E /* IMArtistAttributes.swift in Sources */,
 				D38356C928412C4200AB379E /* IMPriceAttributes.swift in Sources */,
 				D3C25624284224180044B63C /* ApplicationDetailView.swift in Sources */,

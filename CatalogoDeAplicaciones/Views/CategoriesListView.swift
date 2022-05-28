@@ -16,13 +16,15 @@ struct CategoriesListView: View {
                 ForEach(self.catalogueViewModel.categories, id: \.id) { category in
                     if let attributes = category.attributes {
                         if let label = attributes.label {
-                            NavigationLink(label, destination: ApplicationsListView(category: category)
+                            NavigationLink(label, destination: ApplicationView(category: category)
                                 .environmentObject(catalogueViewModel))
                         }
                     }
                 }
             }
-            .navigationTitle(Text("Catálogo de Apps"))
+            .navigationTitle(Text("Catálogo Apps"))
+            Text("Selecciona una categoría")
+                .font(.title)
         }
     }
 }

@@ -1,5 +1,5 @@
 //
-//  ApplicationsListView.swift
+//  ApplicationListView.swift
 //  CatalogoDeAplicaciones
 //
 //  Created by Alberto Pardellas Soto on 28/5/22.
@@ -7,10 +7,8 @@
 
 import SwiftUI
 
-struct ApplicationsListView: View {
+struct ApplicationListView: View {
     @EnvironmentObject var catalogueViewModel: CatalogueViewModel
-
-    var category: Category?
 
     var body: some View {
         List {
@@ -27,17 +25,11 @@ struct ApplicationsListView: View {
                 }
             }
         }
-        .navigationTitle(Text(category!.attributes!.label!))
-        .onAppear {
-            if let category = category {
-                catalogueViewModel.getEntries(category: category)
-            }
-        }
     }
 }
 
-struct ApplicationsListView_Previews: PreviewProvider {
+struct ApplicationListView_Previews: PreviewProvider {
     static var previews: some View {
-        ApplicationsListView()
+        ApplicationListView()
     }
 }
