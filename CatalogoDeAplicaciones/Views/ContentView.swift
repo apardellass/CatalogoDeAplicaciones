@@ -18,7 +18,7 @@ struct ContentView: View {
     private var items: FetchedResults<Item>
 
     var body: some View {
-        CategoriesListView()
+        CategoriesListView(catalogueViewModel: CatalogueViewModel())
     }
 
     private func addItem() {

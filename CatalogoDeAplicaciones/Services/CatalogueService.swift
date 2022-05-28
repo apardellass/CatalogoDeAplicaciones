@@ -7,9 +7,7 @@
 
 import Foundation
 
-class CatalogueService: ObservableObject {
-    @Published var catalogue: Catalogue?
-
+class CatalogueService {
     func getCatalogue(completion: @escaping (Catalogue) -> ()) {
         guard let url = URL(string: "https://itunes.apple.com/es/rss/topfreeapplications/limit=20/json") else {
             print("Invalid url...")

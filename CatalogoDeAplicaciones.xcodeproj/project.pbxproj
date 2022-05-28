@@ -49,6 +49,7 @@
 		D3C20A30284166C0002CE005 /* CatalogueService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C20A2F284166C0002CE005 /* CatalogueService.swift */; };
 		D3C20A3228418EEC002CE005 /* CategoriesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C20A3128418EEC002CE005 /* CategoriesListView.swift */; };
 		D3C20A3428419008002CE005 /* ApplicationsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C20A3328419008002CE005 /* ApplicationsListView.swift */; };
+		D3C2562228420AC90044B63C /* CatalogueViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C2562128420AC90044B63C /* CatalogueViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,6 +115,7 @@
 		D3C20A2F284166C0002CE005 /* CatalogueService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogueService.swift; sourceTree = "<group>"; };
 		D3C20A3128418EEC002CE005 /* CategoriesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesListView.swift; sourceTree = "<group>"; };
 		D3C20A3328419008002CE005 /* ApplicationsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationsListView.swift; sourceTree = "<group>"; };
+		D3C2562128420AC90044B63C /* CatalogueViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogueViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +173,7 @@
 				D3C20A2E284166A1002CE005 /* Persistence */,
 				D38180142840CC4E001849E1 /* Preview Content */,
 				D3C20A2D28416694002CE005 /* Services */,
+				D3C2562028420A6C0044B63C /* ViewModels */,
 				D38356E028413DBA00AB379E /* Views */,
 			);
 			path = CatalogoDeAplicaciones;
@@ -262,6 +265,14 @@
 				D38180172840CC4E001849E1 /* Persistence.swift */,
 			);
 			path = Persistence;
+			sourceTree = "<group>";
+		};
+		D3C2562028420A6C0044B63C /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				D3C2562128420AC90044B63C /* CatalogueViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -416,6 +427,7 @@
 				D381800F2840CC4D001849E1 /* CatalogoDeAplicacionesApp.swift in Sources */,
 				D3C20A30284166C0002CE005 /* CatalogueService.swift in Sources */,
 				D38356D528412CAB00AB379E /* IMAssetType.swift in Sources */,
+				D3C2562228420AC90044B63C /* CatalogueViewModel.swift in Sources */,
 				D38356D128412C8600AB379E /* EntryLink.swift in Sources */,
 				D38356B928412A0A00AB379E /* IMArtistAttributes.swift in Sources */,
 				D38356C928412C4200AB379E /* IMPriceAttributes.swift in Sources */,
