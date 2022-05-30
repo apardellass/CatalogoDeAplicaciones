@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ApplicationDetailView: View {
+    @Environment(\.openURL) var openURL
+
     var entry: Entry?
 
     var body: some View {
@@ -19,13 +21,41 @@ struct ApplicationDetailView: View {
                             AsyncImage(url: URL(string: imageUrlString))
                                 .cornerRadius(20)
 
+                            Text(title)
+                                .font(.title)
+                                .multilineTextAlignment(.center)
+
+                            if let rights = entry.rights?.label {
+                                Text(rights)
+                                    .font(.title3)
+                                    .foregroundColor(.secondary)
+                                    .multilineTextAlignment(.center)
+                            }
+
+                            Divider()
+
                             if let summary = entry.summary?.label {
                                 Text(summary)
                             }
+
+                            Divider()
+
+                            if let link = entry.link?[0].attributes?.href {
+                                if let url = URL(string: link
+                                    .replacingOccurrences(of: "https", with: "itms")
+                                    .replacingOccurrences(of: "apps", with: "itunes"))
+                                {
+                                    Button("Abrir en el App Store") {
+                                        openURL(url)
+                                    }
+                                }
+                            }
                         }
                         .padding()
+
                         Spacer()
-                    }.navigationBarTitle(title, displayMode: .inline)
+                    }
+                    .navigationBarTitleDisplayMode(.inline)
                 }
             }
         }
