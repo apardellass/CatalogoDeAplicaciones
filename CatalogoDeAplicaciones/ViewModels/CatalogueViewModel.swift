@@ -16,7 +16,7 @@ class CatalogueViewModel: ObservableObject {
         getCatalogue()
     }
 
-    private func getCatalogue() {
+    func getCatalogue() {
         CatalogueService().getCatalogue { catalogue in
             self.catalogue = catalogue
 

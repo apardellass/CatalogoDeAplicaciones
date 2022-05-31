@@ -23,6 +23,10 @@ struct CategoriesListView: View {
                 }
             }
             .navigationTitle(Text("Catálogo Apps"))
+            .refreshable {
+                catalogueViewModel.getCatalogue()
+            }
+
             Text("Selecciona una categoría")
                 .font(.title)
         }
