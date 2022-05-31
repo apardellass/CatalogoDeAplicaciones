@@ -11,8 +11,10 @@ class CatalogueViewModel: ObservableObject {
     @Published var categories = [Category]()
     @Published var catalogue: Catalogue?
     @Published var entries = [Entry]()
+    @Published var isLoading = true
 
     init() {
+        isLoading = true
         getCatalogue()
     }
 
@@ -33,6 +35,8 @@ class CatalogueViewModel: ObservableObject {
                     }
                 }
             }
+
+            self.isLoading = false
         }
     }
 

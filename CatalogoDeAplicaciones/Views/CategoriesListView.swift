@@ -12,23 +12,27 @@ struct CategoriesListView: View {
 
     var body: some View {
         NavigationView {
-            List {
-                ForEach(self.catalogueViewModel.categories, id: \.id) { category in
-                    if let attributes = category.attributes {
-                        if let label = attributes.label {
-                            NavigationLink(label, destination: ApplicationView(category: category)
-                                .environmentObject(catalogueViewModel))
+            if catalogueViewModel.isLoading {
+                ProgressView()
+            } else {
+                List {
+                    ForEach(self.catalogueViewModel.categories, id: \.id) { category in
+                        if let attributes = category.attributes {
+                            if let label = attributes.label {
+                                NavigationLink(label, destination: ApplicationView(category: category)
+                                    .environmentObject(catalogueViewModel))
+                            }
                         }
                     }
                 }
-            }
-            .navigationTitle(Text("Catálogo Apps"))
-            .refreshable {
-                catalogueViewModel.getCatalogue()
-            }
+                .navigationTitle(Text("Catálogo Apps"))
+                .refreshable {
+                    catalogueViewModel.getCatalogue()
+                }
 
-            Text("Selecciona una categoría")
-                .font(.title)
+                Text("Selecciona una categoría")
+                    .font(.title)
+            }
         }
     }
 }
