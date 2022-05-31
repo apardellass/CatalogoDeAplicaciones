@@ -34,6 +34,9 @@ struct CategoriesListView: View {
                     .font(.title)
             }
         }
+        .alert(catalogueViewModel.errorMessage, isPresented: $catalogueViewModel.showingAlert) {
+            Button("OK", role: .cancel) {}
+        }
     }
 }
 

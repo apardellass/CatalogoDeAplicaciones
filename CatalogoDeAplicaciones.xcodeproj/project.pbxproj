@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D375EF2328465F770062CBBD /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D375EF2228465F770062CBBD /* NetworkError.swift */; };
 		D381800F2840CC4D001849E1 /* CatalogoDeAplicacionesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D381800E2840CC4D001849E1 /* CatalogoDeAplicacionesApp.swift */; };
 		D38180112840CC4D001849E1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38180102840CC4D001849E1 /* ContentView.swift */; };
 		D38180132840CC4E001849E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D38180122840CC4E001849E1 /* Assets.xcassets */; };
@@ -73,6 +74,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D375EF2228465F770062CBBD /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		D381800B2840CC4D001849E1 /* CatalogoDeAplicaciones.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatalogoDeAplicaciones.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D381800E2840CC4D001849E1 /* CatalogoDeAplicacionesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogoDeAplicacionesApp.swift; sourceTree = "<group>"; };
 		D38180102840CC4D001849E1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -243,6 +245,7 @@
 				D38356C028412BF300AB379E /* Term.swift */,
 				D38356D828412CC500AB379E /* Title.swift */,
 				D38356DA28412CD400AB379E /* TypeEnum.swift */,
+				D375EF2228465F770062CBBD /* NetworkError.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -450,6 +453,7 @@
 				D38356A72841294F00AB379E /* Feed.swift in Sources */,
 				D38356B1284129C100AB379E /* CategoryAttributes.swift in Sources */,
 				D38356CF28412C7700AB379E /* IMReleaseDate.swift in Sources */,
+				D375EF2328465F770062CBBD /* NetworkError.swift in Sources */,
 				D3C2562628423F330044B63C /* ApplicationListView.swift in Sources */,
 				D381801B2840CC4E001849E1 /* CatalogoDeAplicaciones.xcdatamodeld in Sources */,
 				D38356CB28412C5100AB379E /* Currency.swift in Sources */,
