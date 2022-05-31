@@ -8,19 +8,24 @@
 import Foundation
 
 class CatalogueService {
-    func getCatalogue(completion: @escaping (Catalogue) -> ()) {
+    func getCatalogue(completion: @escaping (Catalogue) -> Void) {
         guard let url = URL(string: "https://itunes.apple.com/es/rss/topfreeapplications/limit=20/json") else {
             print("Invalid url...")
             return
         }
 
         URLSession.shared.dataTask(with: url) { data, _, _ in
-            let catalogue = try! JSONDecoder().decode(Catalogue.self, from: data!)
-            print(catalogue)
+            do {
+                let catalogue = try JSONDecoder().decode(Catalogue.self, from: data!)
+                print(catalogue)
 
-            DispatchQueue.main.async {
-                completion(catalogue)
+                DispatchQueue.main.async {
+                    completion(catalogue)
+                }
+            } catch {
+                print("Error decoding catalogue")
             }
+
         }.resume()
     }
 }

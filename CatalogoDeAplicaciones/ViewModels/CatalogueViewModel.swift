@@ -24,7 +24,9 @@ class CatalogueViewModel: ObservableObject {
                 if let entries = feed.entry {
                     for entry in entries {
                         if let category = entry.category {
-                            if !self.categories.contains(where: { $0.attributes?.label == category.attributes?.label }) {
+                            if !self.categories.contains(where: {
+                                $0.attributes?.label == category.attributes?.label
+                            }) {
                                 self.categories.append(category)
                             }
                         }

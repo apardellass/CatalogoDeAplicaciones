@@ -43,8 +43,7 @@ struct ApplicationDetailView: View {
                             if let link = entry.link?[0].attributes?.href {
                                 if let url = URL(string: link
                                     .replacingOccurrences(of: "https", with: "itms")
-                                    .replacingOccurrences(of: "apps", with: "itunes"))
-                                {
+                                    .replacingOccurrences(of: "apps", with: "itunes")) {
                                     Button("Abrir en el App Store") {
                                         openURL(url)
                                     }
