@@ -8,10 +8,9 @@
 import Foundation
 
 class CatalogueService {
-    func getCatalogue(completion: @escaping (Result<Catalogue, NetworkError>) -> Void) {
-        guard let url = URL(string: "https://itunes.apple.com/es/rss/topfreeapplications/limit=20/json") else {
-            print("Invalid url...")
-            return
+    func getCatalogue(urlString: String, completion: @escaping (Result<Catalogue, NetworkError>) -> Void) {
+        guard let url = URL(string: urlString) else {
+            fatalError()
         }
 
         URLSession.shared.dataTask(with: url) { data, response, error in
@@ -24,7 +23,6 @@ class CatalogueService {
                 } catch {
                     completion(.failure(.decodingError(error)))
                 }
-
             }
         }.resume()
     }

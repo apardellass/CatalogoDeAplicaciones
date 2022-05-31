@@ -15,13 +15,15 @@ class CatalogueViewModel: ObservableObject {
     @Published var showingAlert = false
     @Published var errorMessage = ""
 
+    let urlString = "https://itunes.apple.com/es/rss/topfreeapplications/limit=20/json"
+
     init() {
         self.isLoading = true
         getCatalogue()
     }
 
     func getCatalogue() {
-        CatalogueService().getCatalogue { result in
+        CatalogueService().getCatalogue(urlString: urlString) { result in
             DispatchQueue.main.async {
                 self.showingAlert = false
             }
@@ -49,16 +51,18 @@ class CatalogueViewModel: ObservableObject {
     }
 
     private func initCatalogue(catalogue: Catalogue) {
-        self.catalogue = catalogue
+        DispatchQueue.main.async {
+            self.catalogue = catalogue
 
-        if let feed = catalogue.feed {
-            if let entries = feed.entry {
-                for entry in entries {
-                    if let category = entry.category {
-                        if !categories.contains(where: {
-                            $0.attributes?.label == category.attributes?.label
-                        }) {
-                            categories.append(category)
+            if let feed = catalogue.feed {
+                if let entries = feed.entry {
+                    for entry in entries {
+                        if let category = entry.category {
+                            if !self.categories.contains(where: {
+                                $0.attributes?.label == category.attributes?.label
+                            }) {
+                                self.categories.append(category)
+                            }
                         }
                     }
                 }

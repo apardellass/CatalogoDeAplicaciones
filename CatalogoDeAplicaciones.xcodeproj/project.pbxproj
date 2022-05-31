@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D3120A302846812500C755A2 /* CatalogueServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3120A2F2846812500C755A2 /* CatalogueServiceTest.swift */; };
 		D375EF2328465F770062CBBD /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D375EF2228465F770062CBBD /* NetworkError.swift */; };
 		D381800F2840CC4D001849E1 /* CatalogoDeAplicacionesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D381800E2840CC4D001849E1 /* CatalogoDeAplicacionesApp.swift */; };
 		D38180112840CC4D001849E1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38180102840CC4D001849E1 /* ContentView.swift */; };
@@ -74,6 +75,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D3120A2F2846812500C755A2 /* CatalogueServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogueServiceTest.swift; sourceTree = "<group>"; };
 		D375EF2228465F770062CBBD /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		D381800B2840CC4D001849E1 /* CatalogoDeAplicaciones.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatalogoDeAplicaciones.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D381800E2840CC4D001849E1 /* CatalogoDeAplicacionesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogoDeAplicacionesApp.swift; sourceTree = "<group>"; };
@@ -199,6 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				D38180242840CC4E001849E1 /* CatalogoDeAplicacionesTests.swift */,
+				D3120A2F2846812500C755A2 /* CatalogueServiceTest.swift */,
 			);
 			path = CatalogoDeAplicacionesTests;
 			sourceTree = "<group>";
@@ -488,6 +491,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D38180252840CC4E001849E1 /* CatalogoDeAplicacionesTests.swift in Sources */,
+				D3120A302846812500C755A2 /* CatalogueServiceTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
